@@ -1,213 +1,97 @@
-<!doctype html>
-<html lang="zh-Hans">
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>星火学院 — 课程报名</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>焕音艺术 – 音乐培训 & 主持培训</title>
   <style>
-    body { -webkit-tap-highlight-color: transparent; }
-    .glass { background: rgba(255,255,255,0.65); backdrop-filter: blur(8px); }
-    .card-shadow { box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+    body { margin:0; font-family:Arial, sans-serif; background:#f8f8f8; color:#333; }
+    header { background:#121212; color:white; padding:20px; text-align:center; }
+    header h1 { margin:0; font-size:28px; }
+
+    .banner {
+      width:100%;
+      background:url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80') center/cover;
+      height:240px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-size:26px;
+      font-weight:bold;
+      text-shadow:0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .section { padding:30px 20px; max-width:900px; margin:auto; }
+    .section h2 { font-size:24px; margin-bottom:10px; }
+    .section p { line-height:1.6; }
+
+    .cards { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    @media(max-width:700px){ .cards { grid-template-columns:1fr; } }
+
+    .card {
+      background:white;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 { margin-top:0; }
+
+    .signup-box {
+      background:#ffffff;
+      padding:20px;
+      margin-top:20px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .signup-box input, .signup-box button {
+      width:100%; padding:12px; font-size:16px; margin-top:10px;
+      border-radius:8px; border:1px solid #ccc;
+    }
+    .signup-box button {
+      background:#121212; color:white; border:none;
+    }
+
+    footer { text-align:center; padding:20px; color:#666; font-size:14px; }
   </style>
 </head>
+<body>
+  <header>
+    <h1>焕音艺术培训中心</h1>
+    <p>音乐培训 | 主持培训</p>
+  </header>
 
-<body class="bg-gray-50 text-gray-800">
+  <div class="banner">点亮你的艺术之声</div>
 
-<!-- Header -->
-<header class="w-full bg-white sticky top-0 z-30 shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <div class="text-lg font-bold flex items-center gap-2">
-      <div class="w-9 h-9 rounded-md bg-gradient-to-br from-indigo-600 to-pink-500
-                  text-white flex items-center justify-center">教</div>
-      星火学院
-    </div>
-    <nav class="hidden md:flex text-sm gap-4">
-      <a href="#courses" class="hover:text-indigo-600">课程</a>
-      <a href="#about" class="hover:text-indigo-600">关于</a>
-      <a href="#contact" class="hover:text-indigo-600">联系我们</a>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero -->
-<section class="max-w-6xl mx-auto px-4 mt-6">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
-    <div>
-      <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
-        零基础快速入行 · 实战型职业技能提升课程
-      </h1>
-      <p class="mt-3 text-gray-600">
-        系统核心知识 + 真实项目 + 作品集辅导，帮助你快速进入目标岗位。
-      </p>
-
-      <div class="mt-5 flex gap-3">
-        <a href="#courses"
-           class="flex-1 md:flex-none text-center px-5 py-3 rounded-xl bg-indigo-600 
-                  text-white font-semibold shadow">
-          查看课程
-        </a>
-        <button id="quickApply"
-                class="flex-1 md:flex-none px-5 py-3 rounded-xl border font-medium">
-          立即报名
-        </button>
+  <div class="section">
+    <h2>我们的课程</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🎵 音乐培训</h3>
+        <p>包含声乐、钢琴、吉他、流行演唱等课程，由专业导师一对一或小班授课，提升你的艺术表现力。</p>
+      </div>
+      <div class="card">
+        <h3>🎤 主持培训</h3>
+        <p>从语言表达、台风形体到活动主持实战，全方位打造专业主持人能力，让你更自信地站上舞台。</p>
       </div>
     </div>
-
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=60"
-         class="w-full rounded-xl object-cover h-64 md:h-full" />
   </div>
-</section>
 
-<!-- Courses -->
-<section id="courses" class="max-w-6xl mx-auto px-4 mt-10">
-  <h2 class="text-2xl font-bold mb-4">热门课程</h2>
+  <div class="section">
+    <h2>马上报名</h2>
+    <p>填写信息，我们会尽快联系你。可对接支付接口进行在线付款。</p>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- card -->
-    <div class="bg-white rounded-xl glass p-4 card-shadow">
-      <img src="https://images.unsplash.com/photo-1526378725867-3d5d47ef0a6b?auto=format&w=1200"
-           class="h-40 w-full object-cover rounded-lg" />
-      <h3 class="mt-3 font-semibold text-lg">全栈开发入门（3 个月）</h3>
-      <p class="text-sm text-gray-500">￥799</p>
-
-      <button class="btn-apply mt-4 w-full py-2 bg-indigo-600 text-white rounded-xl"
-              data-id="c101" data-title="全栈开发入门" data-price="799">
-        报名并付款
-      </button>
-    </div>
-
-    <div class="bg-white rounded-xl glass p-4 card-shadow">
-      <img src="https://images.unsplash.com/photo-1535945030458-29b4b9a2b1f6?auto=format&w=1200"
-           class="h-40 w-full object-cover rounded-lg" />
-      <h3 class="mt-3 font-semibold text-lg">数据科学与机器学习（4 个月）</h3>
-      <p class="text-sm text-gray-500">￥1299</p>
-
-      <button class="btn-apply mt-4 w-full py-2 bg-indigo-600 text-white rounded-xl"
-              data-id="c102" data-title="数据科学与机器学习" data-price="1299">
-        报名并付款
-      </button>
-    </div>
-
-    <div class="bg-white rounded-xl glass p-4 card-shadow">
-      <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&w=1200"
-           class="h-40 w-full object-cover rounded-lg" />
-      <h3 class="mt-3 font-semibold text-lg">UI/UX 设计强化营（8 周）</h3>
-      <p class="text-sm text-gray-500">￥499</p>
-
-      <button class="btn-apply mt-4 w-full py-2 bg-indigo-600 text-white rounded-xl"
-              data-id="c103" data-title="UI/UX 设计强化营" data-price="499">
-        报名并付款
-      </button>
+    <div class="signup-box">
+      <input type="text" placeholder="姓名" />
+      <input type="tel" placeholder="手机号" />
+      <input type="text" placeholder="想报名的课程（音乐/主持）" />
+      <button>提交报名</button>
     </div>
   </div>
-</section>
 
-<!-- About -->
-<section id="about" class="max-w-6xl mx-auto px-4 mt-10">
-  <h2 class="text-2xl font-bold mb-3">关于我们</h2>
-  <p class="text-gray-600 leading-relaxed">
-    星火学院由行业一线讲师创建，专注 IT、设计、数据等技能培训，
-    课程以“实战项目 + 就业辅导”著称，适合零基础快速入门。
-  </p>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="max-w-6xl mx-auto px-4 mt-10 mb-16">
-  <h2 class="text-2xl font-bold mb-3">联系我们</h2>
-  <p class="text-gray-600">邮箱：hello@xinghuo.com</p>
-  <p class="text-gray-600">微信/电话：186-0000-0000</p>
-</section>
-
-<!-- Footer -->
-<footer class="text-center text-sm text-gray-500 py-6">
-  © <span id="year"></span> 星火学院
-</footer>
-
-<!-- Modal -->
-<div id="modal"
-     class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50 p-4">
-  <div class="bg-white w-full max-w-md rounded-xl p-5 relative">
-    <button id="modalClose" class="absolute right-4 top-3 text-gray-500 text-xl">×</button>
-
-    <h3 id="modalTitle" class="text-lg font-semibold"></h3>
-    <p id="modalPrice" class="text-sm text-gray-500"></p>
-
-    <form id="regForm" class="mt-4 space-y-3">
-      <input type="hidden" id="courseId" />
-
-      <input id="name" placeholder="姓名 *"
-             class="w-full border rounded-lg px-3 py-2">
-      <input id="email" placeholder="邮箱 *" type="email"
-             class="w-full border rounded-lg px-3 py-2">
-      <input id="phone" placeholder="手机号"
-             class="w-full border rounded-lg px-3 py-2">
-      <textarea id="note" placeholder="备注"
-                class="w-full border rounded-lg px-3 py-2 h-20"></textarea>
-
-      <p id="msg" class="text-red-500 text-sm"></p>
-
-      <button id="payBtn"
-              class="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold">
-        去付款
-      </button>
-
-      <button type="button" id="saveBtn"
-              class="w-full py-3 border rounded-xl font-medium">
-        仅报名（不付款）
-      </button>
-    </form>
-  </div>
-</div>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalPrice = document.getElementById("modalPrice");
-const modalClose = document.getElementById("modalClose");
-const regForm = document.getElementById("regForm");
-
-const courses = {
-  c101: { title: "全栈开发入门（3个月）", price: 799 },
-  c102: { title: "数据科学与机器学习（4个月）", price: 1299 },
-  c103: { title: "UI/UX 设计强化营（8周）", price: 499 }
-};
-
-function openModal(id) {
-  const c = courses[id];
-  modalTitle.textContent = c.title;
-  modalPrice.textContent = "￥" + c.price;
-  document.getElementById("courseId").value = id;
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
-}
-
-function closeModal() {
-  modal.classList.add("hidden");
-  modal.classList.remove("flex");
-}
-
-document.querySelectorAll(".btn-apply").forEach(btn => {
-  btn.addEventListener("click", (e) => openModal(e.target.dataset.id));
-});
-
-document.getElementById("quickApply").addEventListener("click", () => openModal("c101"));
-
-modalClose.addEventListener("click", closeModal);
-modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
-
-// TODO: 在这里接入你的后端报名/支付接口，例如微信支付、Stripe、支付宝等。
-regForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("这里接入支付 API，例如微信/支付宝/Stripe");
-});
-</script>
-
+  <footer>
+    © 2025 焕音艺术培训中心
+  </footer>
 </body>
 </html>
